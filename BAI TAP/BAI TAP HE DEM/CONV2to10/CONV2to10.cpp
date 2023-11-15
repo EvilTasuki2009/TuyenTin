@@ -15,6 +15,18 @@ long bin_to_dec(long bin){
     return dec;
 }
 
+long bin_to_dec_using_str(string s){
+    if(s == ""){
+        return 0;
+    }
+    long rs = 0, pos = 0;
+    for(int i = s.size()-1; i >= 0; i--){
+        rs = rs + (s[i]-'0')*pow(2, pos);
+        pos++;
+    }
+    return rs;
+}
+
 int main(){
     freopen("CONV2to10.inp", "r", stdin);
     freopen("CONV2to10.out", "w", stdout);
