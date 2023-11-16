@@ -1,4 +1,3 @@
-Visit luyencode.net
 daykiso.cpp need to be done
 Hieungto.cpp need to be done
 xucxac.cpp need to be done
