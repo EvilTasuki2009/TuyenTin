@@ -28,10 +28,14 @@ int main(){
                 s2 = t2 + s2;
                 tmp2/=10;
             }
-            cout<<s1<<' '<<s2<<endl;
+            if(s1.compare(s2) < 0){
+            	swap(a[i], a[j]);
+			}
         }
     }
-
+    for(int i = 0; i < n; i++){
+    	cout<<a[i]<<' ';
+	}
 
     return 0;
 }
