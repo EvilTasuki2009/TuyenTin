@@ -8,7 +8,6 @@ int main(){
     int n, ct=0, k=0;
     cin >> n;
     long a[n*n];
-    bool le = false;
     for(int i = 0; i < (n*n); i++){
         cin >> a[i];
     }
@@ -18,15 +17,24 @@ int main(){
             ct = 0;
         }
         else{
-            while(ct <= n){
-                if(a[k] % 2 != 0){
-                    cout<<a[k]<<' ';
-                    ct++;
-                }
-                k++;
+            if(a[i] % 2 != 0){
+                cout<<a[i]<<' ';
+                ct++;
             }
         }
-
+    }
+    ct=0;
+    for(int i = 0; i < n*n; i++){
+        if(ct == n){
+            cout<<endl;
+            ct = 0;
+        }
+        else{
+            if(a[i] % 2 == 0){
+                cout<<a[i]<<' ';
+                ct++;
+            }
+        }
     }
 
     return 0;
